@@ -13,25 +13,12 @@ export function PreviewStage({ frameSrc }) {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         figureRef.current,
-        { y: 16, rotate: -1.4, scale: 0.97 },
+        { y: 10, rotate: -0.8, scale: 0.98 },
         {
-          y: -10,
-          rotate: 1.4,
+          y: -8,
+          rotate: 0.8,
           scale: 1,
-          duration: 1.7,
-          ease: "sine.inOut",
-          repeat: -1,
-          yoyo: true
-        }
-      );
-
-      gsap.fromTo(
-        ".scene-glow",
-        { scale: 0.9, opacity: 0.32 },
-        {
-          scale: 1.06,
-          opacity: 0.66,
-          duration: 2.1,
+          duration: 1.8,
           ease: "sine.inOut",
           repeat: -1,
           yoyo: true
@@ -50,8 +37,6 @@ export function PreviewStage({ frameSrc }) {
         <span data-band />
         <span data-band />
       </div>
-      <div className="scene-glow" aria-hidden="true" />
-      <div className="ground-shadow" aria-hidden="true" />
       <figure className="character-shell" ref={figureRef}>
         <img className="character-frame" src={frameSrc} alt="Preview del personaje animado" />
       </figure>

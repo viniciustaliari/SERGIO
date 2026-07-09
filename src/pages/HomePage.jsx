@@ -34,6 +34,7 @@ export function HomePage(props) {
 
         <aside className="hero-note" data-hero>
           <p>Compatible con PNG, SVG, WEBP, JPG y JPEG.</p>
+          <p>Nombra los frames en orden numerico antes de subirlos.</p>
           <p>Control manual de FPS y reproduccion en bucle.</p>
         </aside>
       </section>

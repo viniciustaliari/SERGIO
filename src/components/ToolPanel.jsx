@@ -6,8 +6,12 @@ export function ToolPanel({
   isPlaying,
   maxFps,
   minFps,
+  uploadStatus,
   onFpsChange,
+  onFrameChange,
   onFrameUpload,
+  onNextFrame,
+  onPreviousFrame,
   onResetFrames,
   onTogglePlayback
 }) {
@@ -23,11 +27,19 @@ export function ToolPanel({
       </div>
 
       <div className="tool-controls">
-        <label className="upload-panel" htmlFor="frame-upload">
+        <label
+          className="upload-panel"
+          htmlFor="frame-upload"
+          onDragOver={(event) => event.preventDefault()}
+          onDrop={(event) => {
+            event.preventDefault();
+            onFrameUpload(event.dataTransfer.files);
+          }}
+        >
+          <span className="upload-icon" aria-hidden="true">+</span>
           <span className="upload-title">Carga de frames</span>
-          <span className="upload-copy">
-            Formatos compatibles: PNG, SVG, WEBP, JPG y JPEG.
-          </span>
+          <span className="upload-copy">Haz click o arrastra aqui varios archivos PNG, SVG, WEBP, JPG o JPEG.</span>
+          <span className="upload-copy">Usa nombres numericos como frame_01, frame_02, frame_03.</span>
           <input
             id="frame-upload"
             className="upload-input"
@@ -38,36 +50,89 @@ export function ToolPanel({
           />
         </label>
 
-        <div className="control-row" aria-label="Controles de animacion">
-          <button className="demo-button" type="button" onClick={onTogglePlayback}>
-            {isPlaying ? "Pausar" : "Reproducir"}
-          </button>
+        {uploadStatus ? (
+          <p className={`upload-status upload-status-${uploadStatus.tone}`}>
+            {uploadStatus.message}
+          </p>
+        ) : null}
 
-          <label className="fps-control" htmlFor="fps-input">
-            <span className="fps-label">Frames por segundo</span>
+        <div className="playback-panel" aria-label="Controles de animacion">
+          <div className="transport-row">
+            <button className="demo-button transport-primary" type="button" onClick={onTogglePlayback}>
+              {isPlaying ? "Pausar" : "Reproducir"}
+            </button>
+
+            <button className="ghost-button transport-button" type="button" onClick={onPreviousFrame}>
+              Anterior
+            </button>
+
+            <button className="ghost-button transport-button" type="button" onClick={onNextFrame}>
+              Siguiente
+            </button>
+          </div>
+
+          <label className="range-control" htmlFor="frame-input">
+            <span className="range-label">
+              <span>Frame</span>
+              <strong>{frameIndex + 1} / {frames.length}</strong>
+            </span>
             <input
-              id="fps-input"
-              className="fps-input"
-              type="number"
-              min={minFps}
-              max={maxFps}
+              id="frame-input"
+              className="range-input"
+              type="range"
+              min="0"
+              max={frames.length - 1}
               step="1"
-              value={fps}
-              onChange={(event) => onFpsChange(event.target.value)}
+              value={frameIndex}
+              onChange={(event) => onFrameChange(event.target.value)}
             />
           </label>
 
+          <div className="speed-row">
+            <label className="range-control speed-range" htmlFor="fps-range">
+              <span className="range-label">
+                <span>Velocidad</span>
+                <strong>{fps} FPS</strong>
+              </span>
+              <input
+                id="fps-range"
+                className="range-input"
+                type="range"
+                min={minFps}
+                max={maxFps}
+                step="1"
+                value={fps}
+                onChange={(event) => onFpsChange(event.target.value)}
+              />
+            </label>
+
+            <label className="fps-control" htmlFor="fps-input">
+              <span className="fps-label">FPS</span>
+              <input
+                id="fps-input"
+                className="fps-input"
+                type="number"
+                min={minFps}
+                max={maxFps}
+                step="1"
+                value={fps}
+                onChange={(event) => onFpsChange(event.target.value)}
+              />
+            </label>
+          </div>
+
           {customFrames.length > 0 ? (
-            <button className="ghost-button" type="button" onClick={onResetFrames}>
+            <button className="ghost-button reset-button" type="button" onClick={onResetFrames}>
               Restaurar secuencia base
             </button>
           ) : null}
         </div>
 
         <div className="status-panel">
-          <span>Frame {frameIndex + 1} / {frames.length}</span>
-          <span>{isPlaying ? "Animando" : "Pausado"}</span>
-          <span>{customFrames.length > 0 ? "Secuencia personalizada" : "Secuencia base"}</span>
+          <span className={isPlaying ? "is-live" : ""}>{isPlaying ? "Animando" : "Pausado"}</span>
+          <span className={customFrames.length > 0 ? "is-custom" : ""}>
+            {customFrames.length > 0 ? "Secuencia personalizada" : "Secuencia base"}
+          </span>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import { useFramePlayer } from "./hooks/useFramePlayer";
 import { useGsapPage } from "./hooks/useGsapPage";
 import { useHashRoute } from "./hooks/useHashRoute";
 import { AboutPage } from "./pages/AboutPage";
+import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 
@@ -15,6 +16,7 @@ const defaultFrames = Array.from(
 
 const pageMap = {
   about: AboutPage,
+  contact: ContactPage,
   home: HomePage,
   privacy: PrivacyPage
 };
@@ -42,8 +44,12 @@ export default function App() {
             isPlaying={player.isPlaying}
             maxFps={player.maxFps}
             minFps={player.minFps}
+            uploadStatus={player.uploadStatus}
             onFpsChange={player.updateFps}
+            onFrameChange={player.updateFrameIndex}
             onFrameUpload={player.handleFrameUpload}
+            onNextFrame={player.goToNextFrame}
+            onPreviousFrame={player.goToPreviousFrame}
             onResetFrames={player.resetFrames}
             onTogglePlayback={() => player.setIsPlaying((playing) => !playing)}
           />

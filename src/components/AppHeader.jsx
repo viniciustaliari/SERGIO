@@ -1,6 +1,7 @@
 const navItems = [
   { id: "home", label: "Inicio" },
-  { id: "about", label: "Sobre la herramienta" },
+  { id: "about", label: "Sobre" },
+  { id: "contact", label: "Contacto" },
   { id: "privacy", label: "Privacidad" }
 ];
 
@@ -15,8 +16,7 @@ export function AppHeader({ route, onNavigate }) {
           onNavigate("home");
         }}
       >
-        <span className="brand-kicker">Online Frame Preview</span>
-        <strong className="brand-name">FrameFlow</strong>
+        <strong className="brand-name">SequenceLab</strong>
       </a>
 
       <nav className="site-nav" aria-label="Principal">

@@ -1,0 +1,44 @@
+
+> demo-react-vite-gsap@0.0.0 dev
+> vite --host 127.0.0.1
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m590[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m12:07:32[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PrivacyPage.jsx[22m
+[2m12:08:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m12:09:01[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m12:09:24[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ToolPanel.jsx[22m
+[2m12:09:46[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m12:12:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m12:13:02[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m12:24:35[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ToolPanel.jsx[22m
+[2m12:24:36[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/AboutPage.jsx[22m
+[2m12:24:38[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.jsx[22m
+[2m12:26:41[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m12:34:10[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ToolPanel.jsx[22m
+[2m12:35:02[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m12:35:13[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m12:38:47[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/AboutPage.jsx[22m
+[2m12:38:49[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PrivacyPage.jsx[22m
+[2m12:43:15[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m12:50:45[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m12:50:49[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppHeader.jsx[22m
+[2m12:50:51[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppFooter.jsx[22m
+[2m12:50:53[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/AboutPage.jsx[22m
+[2m12:50:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PrivacyPage.jsx[22m
+[2m13:08:53[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m13:08:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m13:08:56[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppHeader.jsx[22m
+[2m13:08:57[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppFooter.jsx[22m
+[2m13:09:30[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m13:09:49[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ToolPanel.jsx[22m
+[2m13:10:13[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m13:10:15[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m13:10:24[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PrivacyPage.jsx[22m
+[2m13:10:45[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m13:10:46[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ToolPanel.jsx[22m
+[2m13:10:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m13:10:56[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m

@@ -2,7 +2,7 @@ export function AppFooter({ onNavigate }) {
   return (
     <footer className="site-footer" data-reveal>
       <div>
-        <p className="footer-title">FrameFlow</p>
+        <p className="footer-title">SequenceLab</p>
         <p className="footer-copy">
           Herramienta para previsualizar secuencias frame a frame con control de carga
           de archivos y velocidad de reproduccion.
@@ -36,6 +36,15 @@ export function AppFooter({ onNavigate }) {
           }}
         >
           Privacidad
+        </a>
+        <a
+          href="#/contact"
+          onClick={(event) => {
+            event.preventDefault();
+            onNavigate("contact");
+          }}
+        >
+          Contacto
         </a>
       </div>
     </footer>
